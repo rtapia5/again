@@ -2,6 +2,8 @@ body {
   padding: 0px;
   margin: 0;
   background-color: #57b64f;
+  background-image: url("../img/spices.jpg");
+  background-size: contain;
   position: relative;
 }
 body h1 {
@@ -233,7 +235,7 @@ header#mainHeader nav:hover li:nth-child(8) a {
   width: 100%;
   -o-object-fit: scale-down;
      object-fit: scale-down;
-  display: flex;
+  display: cover;
 }
 .swiper-container .swiper-wrapper .swiper-slide .card-columns {
   display: flex;
@@ -252,6 +254,7 @@ header#mainHeader nav:hover li:nth-child(8) a {
 .swiper-container .swiper-wrapper .swiper-slide .text-center {
   text-align: center;
   justify-content: center;
+  font-weight: bold;
   font-size: 1.5vw;
 }
 .swiper-container .swiper-wrapper .swiper-slide .text-right {
