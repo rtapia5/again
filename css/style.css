@@ -2,8 +2,6 @@ body {
   padding: 0px;
   margin: 0;
   background-color: #57b64f;
-  background-image: url("../img/spices.jpg");
-  background-size: contain;
   position: relative;
 }
 body h1 {
