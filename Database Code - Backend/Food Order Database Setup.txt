@@ -1,0 +1,30 @@
+CREATE DATABASE IF NOT EXISTS `FoodOrder` DEFAULT CHARACTER SET utf8 ;
+USE `FoodOrder` ;
+
+CREATE TABLE IF NOT EXISTS `FoodOrder`.`user` (
+  `username` VARCHAR(16) NOT NULL,
+  `email` VARCHAR(150) NOT NULL,
+  `password` VARCHAR(32) NOT NULL,
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `UserID` INT(9) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`UserID`),
+  UNIQUE INDEX `UserID_UNIQUE` (`UserID` ASC) );
+
+CREATE TABLE IF NOT EXISTS `FoodOrder`.`Employee` (
+  `EmployeeID` INT NOT NULL AUTO_INCREMENT,
+  `Payrate` FLOAT(6) NULL,
+  `SSN` INT(8) NULL,
+  `UserID` INT(9) NOT NULL,
+  UNIQUE INDEX `EmployeeID_UNIQUE` (`EmployeeID` ASC),
+  UNIQUE INDEX `SSN_UNIQUE` (`SSN` ASC),
+  INDEX `UserID_idx` (`UserID` ASC),
+  UNIQUE INDEX `UserID_UNIQUE` (`UserID` ASC),
+  PRIMARY KEY (`UserID`),
+  CONSTRAINT `UserID`
+    FOREIGN KEY (`UserID`)
+    REFERENCES `FoodOrder`.`user` (`UserID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+
+INSERT INTO user (username, email, password)
+VALUES (HungryHank, Hhank@gmail.com, Hangry);
