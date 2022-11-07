@@ -6,7 +6,6 @@
             "price": 5.00,
             "calorie": 280,            
             "qty": 3,
-            "image": 
             "description": {
                 "side": ["rice", "salad", "beans"],
                 "flavor": "N/A"
