@@ -1,12 +1,10 @@
-{
-    "food": [
+     [
         {
             "name": "Enchiladas",
-            "type": "Entree",
+            "category": "Entree",
             "price": 5.00,
             "calorie": 280,            
             "qty": 3,
-            "image": 
             "description": {
                 "side": ["rice", "salad", "beans"],
                 "flavor": "N/A"
@@ -15,7 +13,7 @@
 
         {
             "name": "Chile Verde",
-            "type": "Entree",
+            "category": "Entree",
             "price": 6.00,
             "calorie": 380,            
             "qty": 1,
@@ -27,7 +25,7 @@
 
         {
             "name": "Chicken Fajitas",
-            "type": "Entree",
+            "category": "Entree",
             "price": 6.00,
             "calorie": 370,            
             "qty": 1,
@@ -39,7 +37,7 @@
 
         {
             "name": "Super Burrito",
-            "type": "Entree",
+            "category": "Entree",
             "price": 6.00,
             "calorie": 370,            
             "qty": 1,
@@ -51,7 +49,7 @@
 
         {
             "name": "Tacos",
-            "type": "Entree",
+            "category": "Entree",
             "price": 6.00,
             "calorie": 370,
             "qty": 3,
@@ -63,7 +61,7 @@
 
         {
             "name": "Nachos",
-            "type": "Appetizer",
+            "category": "Appetizer",
             "price": 3.00,
             "calorie": 260,            
             "qty": "N/A",
@@ -75,7 +73,7 @@
 
         {
             "name": "Guacamole Dip",
-            "type": "Appetizer",
+            "category": "Appetizer",
             "price": 3.00,
             "calorie": 260,            
             "qty": "N/A",
@@ -87,7 +85,7 @@
 
         {
             "name": "Taquitos",
-            "type": "Appetizer",
+            "category": "Appetizer",
             "price": 3.00,
             "calorie": 260,            
             "qty": 3,
@@ -99,7 +97,7 @@
 
         {
             "name": "Tostada de ceviche",
-            "type": "Appetizer",
+            "category": "Appetizer",
             "price": 3.00,
             "calorie": 260,            
             "qty": "N/A",
@@ -111,7 +109,7 @@
 
         {
             "name": "Fried Mozarella",
-            "type": "Appetizer",
+            "category": "Appetizer",
             "price": 3.00,
             "calorie": 260,            
             "qty": "N/A",
@@ -123,7 +121,7 @@
 
         {
             "name": "Churros",
-            "type": "Dessert",
+            "category": "Dessert",
             "price": 4.00,
             "calorie": 360,
             "qty": 3,
@@ -135,7 +133,7 @@
 
         {
             "name": "Cheesecake",
-            "type": "Dessert",
+            "category": "Dessert",
             "price": 4.00,
             "calorie": 360,
             "qty": "N/A",
@@ -147,7 +145,7 @@
 
         {
             "name": "Flan",
-            "type": "Dessert",
+            "category": "Dessert",
             "price": 4.00,
             "calorie": 360,
             "qty": "N/A",
@@ -159,7 +157,7 @@
 
         {
             "name": "Shakes",
-            "type": "Dessert",
+            "category": "Dessert",
             "price": 4.00,
             "calorie": 360,            
             "qty": "N/A",
@@ -171,7 +169,7 @@
 
         {
             "name": "Molten Chocolate",
-            "type": "Dessert",
+            "category": "Dessert",
             "price": 4.00,
             "calorie": 360,            
             "qty": "N/A",
@@ -183,7 +181,7 @@
         
         {
             "name": "Jarritos",
-            "type": "Drinks",
+            "category": "Drinks",
             "price": 2.00,
             "calorie": 120,            
             "qty": 1,
@@ -195,7 +193,7 @@
 
         {
             "name": "Soda",
-            "type": "Drinks",
+            "category": "Drinks",
             "price": 2.00,
             "calorie": 120,            
             "qty": 1,
@@ -207,7 +205,7 @@
 
         {
             "name": "Aqua Fresca",
-            "type": "Drinks",
+            "category": "Drinks",
             "price": 3.00,
             "calorie": 120,            
             "qty": 1,
@@ -219,7 +217,7 @@
 
         {
             "name": "Lemonade",
-            "type": "Drinks",
+            "category": "Drinks",
             "price": 2.00,
             "calorie": 120,            
             "qty": 1,
@@ -231,7 +229,7 @@
 
         {
             "name": "Horchata",
-            "type": "Drinks",
+            "category": "Drinks",
             "price": 2.00,
             "calorie": 120,            
             "qty": 1,
@@ -241,4 +239,3 @@
             }
         }
     ]
-}

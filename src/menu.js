@@ -1,42 +1,126 @@
-// class Entre{
-//     constructor(name, price) {
-//         this.name = name;
-//         this.price = price;
-//     }
-// }
 
-// class Side{
-//     constructor(name, price) {
-//         this.name = name;
-//         this.price = price;
-//     }
-// }
+const food =      [
+    {
+        name: "Enchiladas", category: "Entree", price: 5.00, calorie: 280, qty: 3, description: { side: ["rice", "salad", "beans"], flavor: "N/A"}
+    },
 
-// class Beverage{
-//     constructor(name, price) {
-//         this.name = name;
-//         this.price = price;
-//     }
-// }
+    {
+        name: "Chile Verde", category: "Entree", price: 6.00, calorie: 380, qty: 1, description: { side: ["rice", "salad", "beans", "tortillas"], flavor: "N/A" }
+    },
 
-class Food {
-    constructor(name, price, type, calorie, description){
-        this.name = name;
-        this.price = price;
-        this.type = type;
-        this.calorie = calorie;
-        this.description =  description;
+    {
+        name: "Chicken Fajitas", category: "Entree", price: 6.00, calorie: 370, qty: 1, description: { side: ["grilled onion", "red and green peppers", "salad", "rice"], flavor: "N/A" }
+    },
+
+    {
+        name: "Super Burrito", category: "Entree", price: 6.00, calorie: 370, qty: 1, description: { side: ["guacamole", "chease", "sour cream", "pico de gallo"], flavor: "N/A" }
+    },
+
+    {
+        name: "Tacos", category: "Entree", price: 6.00, calorie: 370, qty: 3, description: { side: ["onion toppings", "cilantro", "salsa", "lemon"], flavor: "N/A" }
+    },
+
+    {
+        name: "Nachos", category: "Appetizer", price: 3.00, calorie: 260, qty: "N/A", description: { side: ["melted cheese", "sour cream", "guacamole", "pico de gallo"], flavor: "N/A" }
+    },
+
+    {
+        name: "Guacamole Dip", category: "Appetizer", price: 3.00, calorie: 260, qty: "N/A", description: { side: ["Tortilla chips"], flavor: "N/A" }
+    },
+
+    {
+        name: "Taquitos", category: "Appetizer", price: 3.00, calorie: 260, qty: 3, description: { side: ["refried beans", "sour cream", "vegies", "queso fresco"], flavor: "N/A" }
+    },
+
+    {
+        name: "Tostada de ceviche", category: "Appetizer", price: 3.00, calorie: 260, qty: "N/A", description: { side: ["Choice of fish or shrimp"], flavor: "N/A" }
+    },
+
+    {
+        name: "Fried Mozarella", category: "Appetizer", price: 3.00, calorie: 260, qty: "N/A", description: { side: ["marinara sauce"],
+            flavor: "N/A" }
+    },
+
+    {
+        name: "Churros", category: "Dessert", price: 4.00, calorie: 360, qty: 3, description: { side: ["homemade"], flavor: "N/A" }
+    },
+
+    {
+        name: "Cheesecake", category: "Dessert", price: 4.00, calorie: 360, qty: "N/A", description: { side: ["homemade"], flavor: "N/A" }
+    },
+
+    {
+        name: "Flan", category: "Dessert", price: 4.00, calorie: 360, qty: "N/A", description: { side: ["homemade"], flavor: "N/A" } 
+    },
+
+    {
+        name: "Shakes", category: "Dessert", price: 4.00, calorie: 360, qty: "N/A", description: { side: "N/A", flavor: ["vanilla", "chocolate"] }
+    },
+
+    {
+        name: "Molten Chocolate", category: "Dessert", price: 4.00, calorie: 360, qty: "N/A", description: { side: ["Topped with vanilla icecream"], flavor: "N/A"
+        }
+    },
+    
+    {
+        name: "Jarritos", category: "Drinks", price: 2.00, calorie: 120, qty: 1, description: { side: "N/A", flavor: ["Fresa", "Tamarindo", "Mango", "Mandarina",  "Toronja", "Pineapple"] }
+    },
+
+    {
+        name: "Soda", category: "Drinks", price: 2.00, calorie: 120, qty: 1, description: { side: "N/A", flavor: ["Various"] }
+    },
+
+    {
+        name: "Aqua Fresca", category: "Drinks", price: 3.00, calorie: 120, qty: 1, description: { side: ["New daily"], flavor: "N/A" }
+    },
+
+    {
+        name: "Lemonade", category: "Drinks", price: 2.00, calorie: 120, qty: 1, description: { side: "N/A", flavor: ["Strawberry", "Peach"] }
+    },
+
+    {
+        name: "Horchata", category: "Drinks", price: 2.00, calorie: 120, qty: 1, description: { side: "N/A", flavor: [""] }
     }
-}
+]
 
-class Combo {
-    constructor(entre, side, beverage){
-        this.entre = entre;
-        this.side = side;
-        this.beverage = beverage;
-    }
 
-    function comboPrice(entre, side, beverage) {
-        return entre.price + side.price + beverage.price;
-    }
-}
+
+
+const filteredEntree = food.filter((item) => {
+    return item.category == "Entree";
+});
+
+console.log(filteredEntree);
+
+const filteredAppetizer = food.filter((item) => {
+    return item.category == "Appetizer";
+});
+
+console.log(filteredAppetizer);
+
+const filteredDessert = food.filter((item) => {
+    return item.category == "Dessert";
+});
+
+console.log(filteredDessert);
+
+
+const filteredDrink = food.filter((item) => {
+    return item.category == "Drinks";
+});
+
+console.log(filteredDrink);
+
+
+
+
+// const menu = fetch('./src/menu.json')
+//         .then(res => res.json())
+//         .then(data => {
+//         //console.log(data);
+//         return data
+//     });
+
+// console.log(menu)
+
+//from this menu I need to pull out all food that has a category of "Entree", "Appetizer", "Drinks", and "Deserts"
