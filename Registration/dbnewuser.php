@@ -21,6 +21,6 @@ if($con->connect_error) {
 ?>
 <script>
     setTimeout(function(){
-       window.location.href = '../index.html';
+       window.location.href = '../index.html?msg=Registration_Sucessfull';
     }, 5000);
 </script>
