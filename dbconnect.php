@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $username = $_POST['username'];
 
 $password = $_POST['password'];
@@ -20,6 +20,9 @@ if($con->connect_error) {
 		$data = $stmt_result->fetch_assoc();
 		if($data['password'] === $password){
 			echo "<h2>Login Successfully</h2>";
+			header('Location:/main.php?Login_successfull');
+			$username = $data['username'];
+			$_SESSION['username'] = $username;
 	} else {
 		echo "<h2>Invalid username or password</h2>";
 	}
