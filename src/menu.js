@@ -57,7 +57,7 @@ const food =      [
     },
 
     {
-        name: "Molten Chocolate", category: "Dessert", price: 4.00, calorie: 360, qty: "N/A", description: { side: ["Topped with vanilla icecream"], flavor: "N/A"}, imgSrc: "img/Molten Chocolate.jpg",
+        name: "Molten Chocolate", category: "Dessert", price: 4.00, calorie: 360, qty: "N/A", description: { side: ["Topped with vanilla icecream"], flavor: "N/A"}, imgSrc: "img/MoltenChocolate.jpg",
     },
     
     {
@@ -69,7 +69,7 @@ const food =      [
     },
 
     {
-        name: "Aqua Fresca", category: "Drinks", price: 3.00, calorie: 120, qty: 1, description: { side: ["New daily"], flavor: "N/A" }, imgSrc: "img/Aqua Fresca.jpg",
+        name: "Aqua Fresca", category: "Drinks", price: 3.00, calorie: 120, qty: 1, description: { side: ["New daily"], flavor: "N/A" }, imgSrc: "img/AquaFresca.jpg",
     },
 
     {
@@ -92,10 +92,13 @@ const filteredEntree = food.filter((item) => {
 
 //select entree element
 const entrees = document.querySelector(".swiper-container");
+const appetizers = document.querySelector(".swiper-container");
+const desserts = document.querySelector(".swiper-container");
+const drinks = document.querySelector(".swiper-container");
 
-function renderMenuObj(filtered) {
-    filtered.forEach((Food) => {
-        entrees.innerHTML += `
+function renderMenuObj(menuObj, catEl) {
+    menuObj.forEach((Food) => {
+        catEl.innerHTML += `
  
             <div class="swiper-wrapper ${Food.category}">
                 <div class="swiper-slide">
@@ -114,25 +117,18 @@ function renderMenuObj(filtered) {
             <div class="swiper-scrollbar"></div>
 
         `
-        let slider = new Swiper ('.swiper-slide', {
-            effect: 'slide',
-            
-            pagination: {
-              el: '.swiper-pagination',
-            },
-            
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-          
-            scrollbar: {
-              el: '.swiper-scrollbar',
-            },
-          });
 
     })
 }
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    slidesPerView: 1,
+    centeredSlides: true,
+    paginationClickable: true,
+    spaceBetween: 30,
+  });
 
 
 
@@ -161,10 +157,10 @@ const filteredDrink = food.filter((item) => {
 console.log(filteredDrink);
 
 
-renderMenuObj(filteredEntree);
-renderMenuObj(filteredAppetizer);
-renderMenuObj(filteredDessert);
-renderMenuObj(filteredDrink);
+renderMenuObj(filteredEntree, entrees);
+//renderMenuObj(filteredAppetizer, appetizers);
+//renderMenuObj(filteredDessert, desserts);
+//renderMenuObj(filteredDrink, drinks);
 
 
 
