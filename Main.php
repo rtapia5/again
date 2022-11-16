@@ -183,7 +183,6 @@ session_start();
         <div class="swiper-button-next"></div>
         <div class="swiper-scrollbar"></div>
     </div>
-    </div>
 </body>
 </html>
     
